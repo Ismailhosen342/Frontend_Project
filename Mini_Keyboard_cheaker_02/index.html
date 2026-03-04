@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(35, 37, 31);
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  h3 {
+    color: bisque;
+    font-size: 100px;
+    font-weight: 400;
+
+  }
+</style>
+
+
+
+<body>
+  <h3>A</h3>
+
+
+</body>
+<script>
+
+  let h3 = document.querySelector("h3");
+
+  window.addEventListener("keydown", function (dets) {
+
+    if (dets.key === " ") {
+      h3.textContent = "SPC"
+    }
+    else {
+
+      h3.textContent = dets.key;
+    }
+  })
+</script>
+
+</html>
