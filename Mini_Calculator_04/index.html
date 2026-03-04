@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+  }
+
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(35, 37, 31);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #main{
+    background-color: rgb(91, 91, 85);
+    height: 50%;
+    min-height: 200px;
+    width:30% ;
+    min-width: 300px;
+    padding:100px 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    
+  }
+  #display{
+    background-color: aliceblue;
+    color: black;
+    padding:5px ;
+    border-radius: 10px;
+    width: 100%;
+  }
+  #btn{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+#btn button{
+  width: 22%;
+  padding: 7px 5px;
+}
+#submit{
+  width: 100%;
+   padding: 5px;
+   display: flex;
+   align-items: center;
+   justify-content: s;
+}
+#clear{
+  width: 100%;
+  padding: 5px;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  color: black;
+   margin: 5px;
+}
+#submit button{
+  width: 100%;
+  padding: 5px;
+  display: fle;
+}
+#inp{
+  display: flex;
+  align-items:center;
+  justify-content:space-between;
+  width: 100%;
+}
+input,h4{
+  width: 25%;
+  padding: 3px;
+  text-align: center;
+  margin: 3px;
+}
+input::placeholder {
+  font-size: 10px;   /* change size here */
+  text-align: center;
+}
+</style>
+
+<body>
+  <div id="main">
+    <div id="display">
+      <div id="inp">
+        <input id="F_num" type="text" placeholder="F_Number">
+        <h4 id="opp">Op</h4>
+        <input id="S_num" type="text" placeholder="S_Number">
+        <input id="result" type="text" placeholder="Result" disabled>
+      </div>
+      
+    </div>
+    
+    <div id="btn">
+      <button id="add">+</button>
+      <button id="substract">-</button>
+      <button id="multiply">*</button>
+      <button id="division">/</button>
+      
+    </div>
+    <div id="submit">
+      <div id="clear">Clear</div>
+      <button>=</button>
+    </div>
+  </div>
+</body>
+<script>
+let F_num=document.querySelector("#F_num");
+let S_num=document.querySelector("#S_num");
+let opp=document.querySelector("#opp");
+let display=document.querySelector("#result");
+let add=document.querySelector("#add");
+let subtract=document.querySelector("#substract");
+let multiply=document.querySelector("#multiply");
+let division=document.querySelector("#division");
+let submit=document.querySelector("#submit button");
+let clear=document.querySelector("#clear");
+  
+
+add.addEventListener("click",function(){
+  opp.textContent="+";
+})
+subtract.addEventListener("click",function(){
+  opp.textContent="-";
+})
+multiply.addEventListener("click",function(){
+  opp.textContent="*";
+})
+division.addEventListener("click",function(){
+  opp.textContent="/";
+})
+
+submit.addEventListener("click",function(){
+let num1=Number(F_num.value);
+let num2=Number(S_num.value);
+if(opp.textContent==="+"){
+  display.value=num1+num2;
+}
+else if(opp.textContent==="-"){
+  display.value=num1-num2;
+}
+else if(opp.textContent==="*"){
+  display.value=num1*num2;
+}
+else if(opp.textContent==="/"){
+  display.value=num1/num2;
+}
+})
+
+clear.addEventListener("click",function(){
+  F_num.value="";
+  S_num.value="";
+  opp.textContent="Op";
+  display.value="";
+})
+
+</script>
+
+</html>
