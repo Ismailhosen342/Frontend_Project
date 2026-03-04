@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(35, 37, 31);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+#main{
+  background-color: rgb(53, 53, 22);
+  height: 30%;
+  width: 40%;
+  min-width: 270px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+border-radius: 10px;
+
+}
+#box{
+display: flex;
+align-items: space-between;
+justify-content: center;
+gap: 15px;
+}
+
+#add, #subtract{
+  padding: 10px;
+  background-color: rgb(35, 37, 31);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100px;
+}
+#add:hover, #subtract:hover{
+  background-color: rgb(58, 58, 20);
+}
+h3{
+  font-size: 40px;
+  align-items: center;
+}
+</style>
+
+<body>
+<div id="main">
+<div id="box">
+  <button id="subtract">Subtract</button>
+  <h3>0</h3>
+  <button id="add">Add</button>
+</div>
+</div>
+</body>
+<script>
+
+let h3=document.querySelector("h3");
+let add=document.getElementById("add");
+let subtract=document.getElementById("subtract");
+
+add.addEventListener("click",function(){
+  h3.textContent=Number(h3.textContent)+1;
+})
+  subtract.addEventListener("click", function () {
+    if(h3.textContent>0){
+      h3.textContent = Number(h3.textContent) - 1;
+    }
+    
+  })
+
+
+
+
+</script>
+
+</html>
