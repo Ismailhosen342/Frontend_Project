@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(35, 37, 31);
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:20px ;
+ }
+
+ #inp{
+  display: none;
+ }
+ #btn{
+  background-color: rgb(69, 106, 13);
+  padding: 10px 30px;
+  border-radius: 5px;
+  font-weight: 600;
+  text-transform: capitalize;
+  text-align: center;
+  user-select: none;
+ }
+
+ #btn:hover{
+  background-color: rgb(61, 96, 12);
+ }
